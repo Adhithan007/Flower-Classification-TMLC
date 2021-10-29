@@ -4,6 +4,7 @@ import pandas as pd
 import tensorflow as tf
 import seaborn as sns
 import matplotlib.pyplot as plt
+import os
 
 # model = tf.keras.models.load_model('effmodel.hdf5')
 model = tf.keras.models.load_model(os.path.join("StreamLit/Models/","effmodel.hdf5"))
