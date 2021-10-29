@@ -40,7 +40,8 @@ def main():
     
     if(file):
         st.image(file)
-        img_val = validate_set(file)
+        image = resizeimage.resize_cover(image, [224, 224])
+        img_val = validate_set(image)
         y_pred = model1.predict(img_val)
         Y_pred_classes = np.argmax(y_pred,axis=1)
         st.success(Y_pred_classes)
