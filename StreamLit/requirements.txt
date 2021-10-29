@@ -1,6 +1,5 @@
-tensorflow==2.5.0rc0
 streamlit==0.88.0
 numpy==1.19.5
-pandas==1.2.4
-seaborn==0.11.2
-matplotlib==3.4.3
+pillow==8.1.2
+tensorflow==2.5.0rc0
+python-resize-image==1.1.19
