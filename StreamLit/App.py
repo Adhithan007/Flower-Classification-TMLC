@@ -31,7 +31,7 @@ def main():
     st.write("This is a simple image classification web app to predict the name of the Flower")
     
     file = st.file_uploader("Please upload an image file {.jpg| .jpeg}", type=["jpg","jpeg"])
-    choose_model = st.selectbox('Select a trained model:', ('EfficientNet'))
+    choose_model = st.selectbox('Select a trained model:', ('EfficientNet','null'))
     if choose_model == 'EfficientNet':
         model = model
    
