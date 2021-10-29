@@ -35,7 +35,7 @@ def main():
     st.image(file)
     choose_model = st.selectbox('Select a trained model:', ('MobileNet','EfficientNet'))
     if choose_model == 'EfficientNet':
-        model = effmodel
+        model = eff_model
         st.write("doneee")
    
     
