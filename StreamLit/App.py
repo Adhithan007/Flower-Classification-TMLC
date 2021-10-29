@@ -5,22 +5,20 @@ import os
 
 # model = tf.keras.models.load_model('effmodel.hdf5')
 eff_model = tf.keras.models.load_model(os.path.join("StreamLit/Models/","effmodel.hdf5"))
-def validate_set(img):
 
-    X_valid = []
-
-        #image = ImageOps.grayscale(image)
-        
-    image = np.array(img)
-    image_data_as_arr = np.asarray(image)
-        
-    X_valid.append(image_data_as_arr)
-    X_valid = np.asarray(X_valid)   
-    X_valid = X_valid.reshape(-1, 224, 224, 3)
-    return X_valid
 
 # file=False
 def main():
+    
+    
+    def validate_set(img):
+        image = np.array(img)
+        image_data_as_arr = np.asarray(image)
+
+        X_valid.append(image_data_as_arr)
+        X_valid = np.asarray(X_valid)   
+        X_valid = X_valid.reshape(-1, 224, 224, 3)
+        return X_valid
         
     
     st.write("""
