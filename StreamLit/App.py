@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import os
 
 # model = tf.keras.models.load_model('effmodel.hdf5')
-model = tf.keras.models.load_model(os.path.join("StreamLit/Models/","effmodel.hdf5"))
+eff_model = tf.keras.models.load_model(os.path.join("StreamLit/Models/","effmodel.hdf5"))
 
 # def validate_set(img):
 
@@ -35,7 +35,7 @@ def main():
     file = st.file_uploader("Please upload an image file {.jpg| .jpeg}", type=["jpg","jpeg"])
     choose_model = st.selectbox('Select a trained model:', ('MobileNet','EfficientNet'))
     if choose_model == 'EfficientNet':
-        model = model
+        model = effmodel
         st.success("doneee")
    
     
