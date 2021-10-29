@@ -3,6 +3,7 @@ import numpy as np
 from resizeimage import resizeimage
 import tensorflow as tf
 import os
+from PIL import Image
 
 # model = tf.keras.models.load_model('effmodel.hdf5')
 eff_model = tf.keras.models.load_model(os.path.join("StreamLit/Models/","effmodel.hdf5"))
@@ -41,7 +42,8 @@ def main():
     
     if(file):
         st.image(file)
-        image = resizeimage.resize_cover(file, [224, 224])
+        image = Image.open(file)
+        image = resizeimage.resize_cover(image, [224, 224])
         img_val = validate_set(image)
         y_pred = model1.predict(img_val)
         Y_pred_classes = np.argmax(y_pred,axis=1)
