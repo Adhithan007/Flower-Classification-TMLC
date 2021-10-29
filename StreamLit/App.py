@@ -35,8 +35,8 @@ def main():
     file = st.file_uploader("Please upload an image file {.jpg| .jpeg}", type=["jpg","jpeg"])
     choose_model = st.selectbox('Select a trained model:', ('MobileNet','EfficientNet'))
     if choose_model == 'EfficientNet':
-#         model = effmodel
-        st.success("doneee")
+        model = effmodel
+        st.write("doneee")
    
     
 #     if(file):
