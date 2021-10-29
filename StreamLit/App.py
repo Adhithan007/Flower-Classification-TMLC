@@ -41,7 +41,7 @@ def main():
     
     if(file):
         st.image(file)
-        image = resizeimage.resize_cover(image, [224, 224])
+        image = resizeimage.resize_cover(file, [224, 224])
         img_val = validate_set(image)
         y_pred = model1.predict(img_val)
         Y_pred_classes = np.argmax(y_pred,axis=1)
