@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import os
 
 # model = tf.keras.models.load_model('effmodel.hdf5')
-# eff_model = tf.keras.models.load_model(os.path.join("StreamLit/Models/","effmodel.hdf5"))
+eff_model = tf.keras.models.load_model(os.path.join("StreamLit/Models/","effmodel.hdf5"))
 
 # def validate_set(img):
 
