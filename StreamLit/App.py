@@ -32,18 +32,19 @@ def main():
 
 
     file = st.file_uploader("Please upload an image file {.jpg| .jpeg}", type=["jpg","jpeg"])
-    st.image(file)
+ 
     choose_model = st.selectbox('Select a trained model:', ('MobileNet','EfficientNet'))
     if choose_model == 'EfficientNet':
         model = eff_model
         st.write("doneee")
    
     
-#     if(file):
-#         img_val = validate_set(file)
-#         y_pred = model1.predict(img_val)
-#         Y_pred_classes = np.argmax(y_pred,axis=1)
-#         st.success(Y_pred_classes)
+    if(file):
+        st.image(file)
+        img_val = validate_set(file)
+        y_pred = model1.predict(img_val)
+        Y_pred_classes = np.argmax(y_pred,axis=1)
+        st.success(Y_pred_classes)
         
         
       
