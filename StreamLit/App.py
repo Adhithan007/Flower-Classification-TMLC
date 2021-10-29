@@ -5,7 +5,7 @@ from tensorflow.keras.models import load_model
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-model = load_model('StreamLit/effmodel2.hdf5')
+model = load_model('StreamLit/effmodel.hdf5')
 
 def validate_set(img):
 
