@@ -33,6 +33,7 @@ def main():
 #     eff_model = tf.keras.models.load_model(os.path.join("StreamLit/Models/effmodel.hdf5"))
 
     file = st.file_uploader("Please upload an image file {.jpg| .jpeg}", type=["jpg","jpeg"])
+    st.write(plt.imshow(file))
     choose_model = st.selectbox('Select a trained model:', ('MobileNet','EfficientNet'))
     if choose_model == 'EfficientNet':
 #         model = effmodel
