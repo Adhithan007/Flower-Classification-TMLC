@@ -36,11 +36,11 @@ def main():
         model = model
    
     
-    if(file):
-        img_val = validate_set(file)
-        y_pred = model1.predict(img_val)
-        Y_pred_classes = np.argmax(y_pred,axis=1)
-        st.success(Y_pred_classes)
+#     if(file):
+#         img_val = validate_set(file)
+#         y_pred = model1.predict(img_val)
+#         Y_pred_classes = np.argmax(y_pred,axis=1)
+#         st.success(Y_pred_classes)
         
         
       
@@ -49,19 +49,7 @@ def main():
     
     
     
-    # Sidebar Column
-    st.sidebar.title('Sidebar Widgets')
-    #radio button 
-    rating = st.sidebar.radio('Are You Happy with the Example',('Yes','No','Not Sure'))
-    if rating == 'Yes':
-        st.sidebar.success('Thank You for Selecting Yes')
-    elif rating =='No':
-        st.sidebar.info('Thank You for Selecting No')
-    elif rating =='Not Sure':
-        st.sidebar.info('Thank You for Selecting Not sure')
-    #selectbox
-    rating = st.sidebar.selectbox("How much would you rate this App? ",
-                         ['5 Stars', '4 Stars', '3 Stars','2 Stars','1 Star'])
+
     
 if __name__ == '__main__':
     main()  
