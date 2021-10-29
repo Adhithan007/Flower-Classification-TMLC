@@ -1,11 +1,11 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-from tensorflow.keras.models import load_model
+from tensorflow as tf
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# model = load_model('effmodel.hdf5')
+model = tf.keras.models.load_model('effmodel.hdf5')
 
 # def validate_set(img):
 
@@ -31,9 +31,10 @@ def main():
     st.write("This is a simple image classification web app to predict the name of the Flower")
     
     file = st.file_uploader("Please upload an image file {.jpg| .jpeg}", type=["jpg","jpeg"])
-    choose_model = st.selectbox('Select a trained model:', ('EfficientNet','null'))
+    choose_model = st.selectbox('Select a trained model:', ('MobileNet','EfficientNet'))
     if choose_model == 'EfficientNet':
         model = model
+        st.success("doneee")
    
     
 #     if(file):
