@@ -1,26 +1,24 @@
 import streamlit as st
 import numpy as np
-import pandas as pd
 import tensorflow as tf
-import seaborn as sns
 import matplotlib.pyplot as plt
 import os
 
 # model = tf.keras.models.load_model('effmodel.hdf5')
 
-# def validate_set(img):
+def validate_set(img):
 
-#     X_valid = []
+    X_valid = []
 
-#         #image = ImageOps.grayscale(image)
+        #image = ImageOps.grayscale(image)
         
-#     image = np.array(img)
-#     image_data_as_arr = np.asarray(image)
+    image = np.array(img)
+    image_data_as_arr = np.asarray(image)
         
-#     X_valid.append(image_data_as_arr)
-#     X_valid = np.asarray(X_valid)   
-#     X_valid = tf.expand_dims(X_valid, axis=-1)
-#     return X_valid
+    X_valid.append(image_data_as_arr)
+    X_valid = np.asarray(X_valid)   
+    X_valid = tf.expand_dims(X_valid, axis=-1)
+    return X_valid
 
 # file=False
 def main():
