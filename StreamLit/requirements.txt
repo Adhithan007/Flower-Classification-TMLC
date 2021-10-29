@@ -3,4 +3,3 @@ numpy==1.19.5
 pillow==8.1.2
 tensorflow==2.5.0rc0
 python-resize-image==1.1.19
-os-sys==2.1.4
