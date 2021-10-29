@@ -9,6 +9,7 @@ eff_model = tf.keras.models.load_model(os.path.join("StreamLit/Models/","effmode
 
 def validate_set(img):
     image = np.array(img) 
+    st.write(image.shape)
     X_valid = image.reshape(-1, 224, 224, 3)
     return X_valid
 
