@@ -30,7 +30,7 @@ def main():
              )
     st.write("This is a simple image classification web app to predict the name of the Flower")
 
-    eff_model = tf.keras.models.load_model(os.path.join("StreamLit/Models/effmodel.hdf5"))
+#     eff_model = tf.keras.models.load_model(os.path.join("StreamLit/Models/effmodel.hdf5"))
 
     file = st.file_uploader("Please upload an image file {.jpg| .jpeg}", type=["jpg","jpeg"])
     choose_model = st.selectbox('Select a trained model:', ('MobileNet','EfficientNet'))
