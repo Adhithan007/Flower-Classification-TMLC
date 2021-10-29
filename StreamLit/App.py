@@ -20,24 +20,42 @@ def validate_set(img):
     X_valid = tf.expand_dims(X_valid, axis=-1)
     return X_valid
 
+# file=False
+def main():
+        
+    
+    st.write("""
+             # Flower Image Classification
+             """
+             )
+    st.write("This is a simple image classification web app to predict the name of the Flower")
 
-st.write("""     # Flower Image Classification   """)
-st.write("This is a simple image classification web app to predict the name of the Flower")
+    eff_model = tf.keras.models.load_model(os.path.join("StreamLit/Models/effmodel.hdf5"))
 
-eff_model = tf.keras.models.load_model(os.path.join("StreamLit/Models/","effmodel.hdf5"))
-
-file = st.file_uploader("Please upload an image file {.jpg| .jpeg}", type=["jpg","jpeg"])
-choose_model = st.selectbox('Select a trained model:', ('MobileNet','EfficientNet'))
-if choose_model == 'EfficientNet':
-    model = effmodel
-    st.write("doneee")
+    file = st.file_uploader("Please upload an image file {.jpg| .jpeg}", type=["jpg","jpeg"])
+    choose_model = st.selectbox('Select a trained model:', ('MobileNet','EfficientNet'))
+    if choose_model == 'EfficientNet':
+#         model = effmodel
+        st.write("doneee")
    
     
-if(file):
-    img_val = validate_set(file)
-    y_pred = model.predict(img_val)
-    Y_pred_classes = np.argmax(y_pred,axis=1)
-    st.success(Y_pred_classes)
+#     if(file):
+#         img_val = validate_set(file)
+#         y_pred = model1.predict(img_val)
+#         Y_pred_classes = np.argmax(y_pred,axis=1)
+#         st.success(Y_pred_classes)
         
+        
+      
+    
+    
+    
+    
+    
 
     
+if __name__ == '__main__':
+    main()  
+    
+    
+
