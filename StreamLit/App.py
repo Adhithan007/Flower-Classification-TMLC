@@ -16,7 +16,7 @@ def validate_set(img):
         
     X_valid.append(image_data_as_arr)
     X_valid = np.asarray(X_valid)   
-    X_valid = tf.expand_dims(X_valid, axis=-1)
+    X_valid = X_valid.reshape(-1, 224, 224, 3)
     return X_valid
 
 # file=False
