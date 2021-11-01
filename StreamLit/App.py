@@ -7,6 +7,8 @@ from PIL import Image
 
 # model = tf.keras.models.load_model('effmodel.hdf5')
 eff_model = tf.keras.models.load_model(os.path.join("StreamLit/Models/","effmodel.hdf5"))
+mobile_model = tf.keras.models.load_model(os.path.join("StreamLit/Models/","MobileNet.hdf5"))
+
 
 
 def validate_set(img):
@@ -37,6 +39,9 @@ def main():
     choose_model = st.selectbox('Select a trained model:', ('MobileNet','EfficientNet'))
     if choose_model == 'EfficientNet':
         model = eff_model
+        st.write("doneee")
+    if choose_model == 'MobileNet':
+        model = mobile_model
         st.write("doneee")
    
     
