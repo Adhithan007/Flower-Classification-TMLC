@@ -146,10 +146,10 @@ def main():
     choose_model = st.selectbox('Select a trained model:', ('MobileNet','EfficientNet'))
     if choose_model == 'EfficientNet':
         model = eff_model
-        st.write("eff doneee")
+#         st.write("eff doneee")
     if choose_model == 'MobileNet':
         model = mobile_model
-        st.write("mobile doneee")
+#         st.write("mobile doneee")
    
     
     if(file):
@@ -159,7 +159,7 @@ def main():
         img_val = validate_set(image)
         y_pred = model.predict(img_val)
         Y_pred_classes = np.argmax(y_pred,axis=1)
-        st.success(Y_pred_classes)
+#         st.success(Y_pred_classes)
         position = val_list.index(Y_pred_classes)
         st.success(key_list[position])
         
