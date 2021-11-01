@@ -10,7 +10,7 @@ eff_model = tf.keras.models.load_model(os.path.join("StreamLit/Models/","effmode
 mobile_model = tf.keras.models.load_model(os.path.join("StreamLit/Models/","MobileNet.hdf5"))
 
 
- label={'alpine sea holly': 0,
+label={ 'alpine sea holly': 0,
         'anthurium': 1,
         'artichoke': 2,
         'azalea': 3,
