@@ -39,10 +39,10 @@ def main():
     choose_model = st.selectbox('Select a trained model:', ('MobileNet','EfficientNet'))
     if choose_model == 'EfficientNet':
         model = eff_model
-        st.write("doneee")
+        st.write("eff doneee")
     if choose_model == 'MobileNet':
         model = mobile_model
-        st.write("doneee")
+        st.write("mobile doneee")
    
     
     if(file):
