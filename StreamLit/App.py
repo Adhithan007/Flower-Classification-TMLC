@@ -120,7 +120,7 @@ val_list = list(label.values())
     
 def validate_set(img):
     image = np.array(img) 
-    st.write(image.shape)
+#     st.write(image.shape)
     X_valid = image.reshape(-1, 224, 224, 3)
     return X_valid
 
