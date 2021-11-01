@@ -153,7 +153,7 @@ def main():
    
     
     if(file):
-        st.image(file)
+        st.image(file, width = 150)
         image = Image.open(file)
         image = resizeimage.resize_cover(image, [224, 224])
         img_val = validate_set(image)
